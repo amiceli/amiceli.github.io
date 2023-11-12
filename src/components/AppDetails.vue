@@ -1,0 +1,29 @@
+<template>
+    <div class="AppDetails">
+        <div class="AppDetails__grid">
+            <div></div>
+            <div class="for--mouse">
+                <img
+                    src="@/assets/mouse.png"
+                    alt="map"
+                >
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+    .AppDetails {
+        padding-right: 60px;
+        margin-top: 70px;
+        margin-bottom: 130px;
+
+        .for--mouse {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+</style>
