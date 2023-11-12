@@ -7,4 +7,14 @@ module.exports = {
         `@amiceli/eslint-config-base`,
         `@amiceli/eslint-config-vue`,
     ],
+    rules : {
+        "import/no-extraneous-dependencies" : [
+            `error`,
+            {
+                devDependencies : [
+                    `vite.config.js`,
+                ],
+            },
+        ],
+    },
 }
