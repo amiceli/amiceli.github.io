@@ -70,13 +70,16 @@
         </div>
         <div class="AppForever__line for--rod">
             <div>
-                <b>FR</b> Langue maternelle, trop facile
+                <b>FR</b> <br>
+                Langue maternelle, trop facile
             </div>
             <div>
-                <b>IT</b> se non parliamo di lavoro, va bene
+                <b>IT</b> <br>
+                Se non parliamo di lavoro, va bene
             </div>
             <div>
-                <b>EN</b> If we speak technical, no problem
+                <b>EN</b> <br>
+                If we speak technical, no problem
             </div>
         </div>
     </div>

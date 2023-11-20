@@ -2,7 +2,7 @@
     <div class="AppDev">
         <div>
             <img
-                src="@/assets/code.png"
+                src="@/assets/img/code.png"
                 alt="code"
             >
         </div>

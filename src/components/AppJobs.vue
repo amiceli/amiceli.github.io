@@ -8,11 +8,11 @@
         </div>
         <div class="AppJob__svg">
             <img
-                src="@/assets/ns.svg"
+                src="@/assets/img/ns.svg"
                 alt="logo"
             >
             <img
-                src="@/assets/lsi.svg"
+                src="@/assets/img/lsi.svg"
                 alt="logo"
             >
         </div>
@@ -43,12 +43,12 @@
     </div>
     <div class="AppJobDetails for--rod">
         <img
-            src="@/assets/bonbon.png"
+            src="@/assets/img/bonbon.png"
             alt="bonbon"
         >
         <div>
             <img
-                src="@/assets/rock.png"
+                src="@/assets/img/rock.png"
                 alt="rock"
             >
             <p>

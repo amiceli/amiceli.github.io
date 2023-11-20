@@ -4,7 +4,7 @@
             <div></div>
             <div class="for--mouse">
                 <img
-                    src="@/assets/mouse.png"
+                    src="@/assets/img/mouse.png"
                     alt="map"
                 >
             </div>

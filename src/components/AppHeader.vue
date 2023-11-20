@@ -13,7 +13,7 @@
             </div>
         </div>
         <img
-            src="https://quizzical-elion-a5b91a.netlify.app/img/profile.b3e13b8f.png"
+            src="@/assets/img/profile.png"
             alt="moi"
         >
     </div>

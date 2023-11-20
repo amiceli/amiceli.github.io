@@ -7,6 +7,7 @@
         <AppLavori />
         <AppJobs />
         <AppForever />
+        <AppFooter />
     </div>
 </template>
 
@@ -18,6 +19,7 @@
     import AppLavori from './components/AppLavori.vue'
     import AppJobs from './components/AppJobs.vue'
     import AppForever from './components/AppForever.vue'
+    import AppFooter from './components/AppFooter.vue'
 </script>
 
 <style lang="scss">
@@ -25,7 +27,7 @@
 
     @font-face {
         font-family: 'Kbanavoxlost';
-        src: url('../src/assets/Kbanavoxlost-gajq.ttf') format('woff');
+        src: url('../src/assets/font/Kbanavoxlost-gajq.ttf') format('woff');
     }
 
     html,
