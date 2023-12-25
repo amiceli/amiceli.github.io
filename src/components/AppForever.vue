@@ -1,3 +1,4 @@
+import TrackLink from './TrackLink.vue';
 <template>
     <div class="AppForever">
         <div class="AppForever__projects">
@@ -5,12 +6,9 @@
                 { Dev le jour, dev la nuit }
             </h1>
             <h2 class="for--rod">
-                <a
-                    href="https://poke.volpe.xyz/"
-                    target="_blank"
-                >
+                <TrackLink link="https://poke.volpe.xyz/">
                     poke.volpe.xyz
-                </a>
+                </TrackLink>
             </h2>
 
             <p>
@@ -20,12 +18,9 @@
             </p>
 
             <h2 class="for--rod">
-                <a
-                    href="https://beat-time.netlify.app/"
-                    target="_blank"
-                >
+                <TrackLink link="https://beat-time.netlify.app/">
                     beat-time.netlify.app
-                </a>
+                </TrackLink>
             </h2>
 
             <p>
@@ -40,10 +35,9 @@
             </p>
 
             <h2 class="for--rod">
-                <a
-                    href="https://github.com/amiceli/mailparser"
-                    target="_blank"
-                >mailparser</a>
+                <TrackLink link="https://github.com/amiceli/mailparser">
+                    mailparser
+                </TrackLink>
             </h2>
 
             <p>
@@ -61,10 +55,9 @@
 
             <p>
                 Si t’as le temps, jette un oeil sur mon
-                <a
-                    href="https://github.com/amiceli"
-                    target="_blank"
-                >github</a> .
+                <TrackLink link="https://github.com/amiceli">
+                    github
+                </TrackLink>.
                 Y a des outils en ligne de commande pour les dev, le terminal y a que ça de vrai !
             </p>
         </div>
@@ -84,6 +77,10 @@
         </div>
     </div>
 </template>
+
+<script setup>
+    import TrackLink from '@/components/TrackLink.vue'
+</script>
 
 <style lang="scss" scoped>
     .AppForever {

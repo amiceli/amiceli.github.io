@@ -3,29 +3,27 @@
         <div class="for--rod">
             Si tu aimes les posts de dev
         </div>
-        <a
-            href="https://dev.to/amiceli"
-            target="_blank"
-        >
+        <TrackLink link="https://dev.to/amiceli">
             <img
                 src="@/assets/img/dev.svg"
                 alt="dev.to"
             >
-        </a>
-        <a
-            href="https://github.com/amiceli"
-            target="_blank"
-        >
+        </TrackLink>
+        <TrackLink link="https://github.com/amiceli">
             <img
                 src="@/assets/img/github.svg"
                 alt="Github"
             >
-        </a>
+        </TrackLink>
         <div class="for--rod">
             Si tu aimes le code
         </div>
     </div>
 </template>
+
+<script setup>
+    import TrackLink from '@/components/TrackLink.vue'
+</script>
 
 <style lang="scss" scoped>
     .AppFooter {
