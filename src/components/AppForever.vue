@@ -95,6 +95,22 @@ import TrackLink from './TrackLink.vue';
                 text-align: center;
                 font-size: 30px;
             }
+
+            @include onlyMobile () {
+                display: unset;
+                margin-bottom: 0;
+
+                div {
+                    margin-bottom: 20px;
+                    b {
+                        display: block;
+                        text-align: center;
+                    }
+                    br {
+                        display: none;
+                    }
+                }
+            }
         }
 
         &__projects {

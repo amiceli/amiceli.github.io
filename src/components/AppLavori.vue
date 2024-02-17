@@ -43,5 +43,19 @@
                 margin-top: 28px;
             }
         }
+
+        @include onlyMobile () {
+            display: unset;
+
+            img {
+                margin-bottom: 20px;
+                width: 100%;
+                margin-top: 20px;
+            }
+            b {
+                display: block;
+                text-align: center;
+            }
+        }
     }
 </style>
