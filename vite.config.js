@@ -18,6 +18,20 @@ export default defineConfig({
             },
         },
     ],
+    css : {
+        preprocessorOptions : {
+            scss : {
+                additionalData : `
+                    @mixin onlyMobile () {
+                        @media (pointer:none),
+                        (pointer:coarse) {
+                            @content;
+                        }
+                    }
+                `,
+            },
+        },
+    },
     resolve : {
         alias : {
             '@' : fileURLToPath(new URL(`./src`, import.meta.url)),
