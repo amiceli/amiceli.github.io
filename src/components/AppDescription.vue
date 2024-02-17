@@ -12,6 +12,7 @@
     .AppDescription {
         width: 876px;
         margin: auto;
+
         h1 {
             color : #D8DEE9;
             font-size: 40px;
@@ -24,6 +25,14 @@
             font-size: 40px;
             display: block;
             text-align: right;
+        }
+
+        @include onlyMobile () {
+            width: 100%;
+
+            h1 {
+                margin-top : 50px;
+            }
         }
     }
 </style>

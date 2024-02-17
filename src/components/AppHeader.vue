@@ -26,7 +26,6 @@
 <style scoped lang="scss">
     .AppHeader {
         display: flex;
-        // background: red;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -47,6 +46,12 @@
                 grid-gap: 20px;
                 align-items: center;
 
+                @include onlyMobile () {
+                    display: unset;
+                    position : unset;
+                    text-align: center;
+                }
+
                 p {
                     opacity: 0.4;
                 }
@@ -56,6 +61,17 @@
                     vertical-align: middle;
                     width: 46px;
                 }
+            }
+        }
+
+        @include onlyMobile () {
+            display: block;
+            svg {
+                width: 100%;
+            }
+
+            img {
+                margin: auto;
             }
         }
     }

@@ -1,65 +1,170 @@
 <template>
-    <div class="AppJob">
-        <div>
-            <div class="for--rod">
-                <div>2015</div>
-                <div>2013</div>
+    <DesktopOrMobile>
+        <template #desktop>
+            <div class="AppJob">
+                <div>
+                    <div class="for--rod">
+                        <div>2015</div>
+                        <div>2013</div>
+                    </div>
+                </div>
+                <div class="AppJob__svg">
+                    <img
+                        src="@/assets/img/ns.svg"
+                        alt="logo"
+                    >
+                    <img
+                        src="@/assets/img/lsi.svg"
+                        alt="logo"
+                    >
+                </div>
+                <div>
+                    <div class="for--rod is--last">
+                        <div>2023 et c'est pas fini !</div>
+                        <div>2015</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="AppJob__svg">
-            <img
-                src="@/assets/img/ns.svg"
-                alt="logo"
-            >
-            <img
-                src="@/assets/img/lsi.svg"
-                alt="logo"
-            >
-        </div>
-        <div>
-            <div class="for--rod is--last">
-                <div>2023 et c'est pas fini !</div>
-                <div>2015</div>
+        </template>
+        <template #mobile>
+            <div class="Mobile__job">
+                <div class="for--img">
+                    <img src="@/assets/img/ns.png">
+                </div>
+                <div>
+                    <h2>
+                        Natural Solution
+                        <br>
+                        <i>(2013 - 2015)</i>
+                    </h2>
+                    <p>
+                        2 ans d’alternance que j’oublirais jamais !<br>
+                        Découverte du front avec
+                        backbone et de l’UX &lt;3
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="AppJobDescription for--rod">
-        <div>
-            <h2>Natural Solution</h2>
-            <p>
-                2 ans d’alternance que j’oublirais jamais !<br>
-                Découverte du front avec
-                backbone et de l’UX &lt;3
-            </p>
-        </div>
-        <div>
-            <h2>Letsignit</h2>
-            <p>
-                8 ans de paradis, et c’est pas fini !<br>
-                Arrivé comme dev front et devenir Lead, puis Manager !<br>
-                Et sans super bonbon ^^
-            </p>
-        </div>
-    </div>
-    <div class="AppJobDetails for--rod">
-        <img
-            src="@/assets/img/bonbon.png"
-            alt="bonbon"
-        >
-        <div>
-            <img
-                src="@/assets/img/rock.png"
-                alt="rock"
-            >
-            <p>
-                Un petit cailloux pour les<br>
-                expériences qui ont pas ce niveau ^^
-            </p>
-        </div>
-    </div>
+            <div class="Mobile__job">
+                <div class="for--img">
+                    <img src="@/assets/img/lsi.png">
+                </div>
+                <h2>Letsignit
+                    <br>
+                    <i>(depuis 2015 ;)</i>
+                </h2>
+                <p>
+                    8 ans de paradis, et c’est pas fini !<br>
+                    Arrivé comme dev front et devenir Lead, puis Manager !<br>
+                    Et sans super bonbon ^^
+                </p>
+                <img
+                    src="@/assets/img/bonbon.png"
+                    alt="bonbon"
+                >
+            </div>
+        </template>
+    </DesktopOrMobile>
+    <!--  -->
+    <DesktopOrMobile>
+        <template #desktop>
+            <div class="AppJobDescription for--rod">
+                <div>
+                    <h2>Natural Solution</h2>
+                    <p>
+                        2 ans d’alternance que j’oublirais jamais !<br>
+                        Découverte du front avec
+                        backbone et de l’UX &lt;3
+                    </p>
+                </div>
+                <div>
+                    <h2>Letsignit</h2>
+                    <p>
+                        8 ans de paradis, et c’est pas fini !<br>
+                        Arrivé comme dev front et devenir Lead, puis Manager !<br>
+                        Et sans super bonbon ^^
+                    </p>
+                    <img
+                        src="@/assets/img/bonbon.png"
+                        alt="bonbon"
+                    >
+                </div>
+            </div>
+        </template>
+    </DesktopOrMobile>
+    <!--  -->
+    <DesktopOrMobile>
+        <template #desktop>
+            <div class="AppJobDetails for--rod">
+                <img
+                    src="@/assets/img/bonbon.png"
+                    alt="bonbon"
+                >
+                <div>
+                    <img
+                        src="@/assets/img/rock.png"
+                        alt="rock"
+                    >
+                    <p>
+                        Un petit cailloux pour les<br>
+                        expériences qui ont pas ce niveau ^^
+                    </p>
+                </div>
+            </div>
+        </template>
+        <template #mobile>
+            <div class="Mobile__rock">
+                <img
+                    src="@/assets/img/rock.png"
+                    alt="rock"
+                >
+                <p>
+                    Un petit cailloux pour les<br>
+                    expériences qui ont pas ce niveau ^^
+                </p>
+            </div>
+        </template>
+    </DesktopOrMobile>
 </template>
 
+<script setup>
+    import DesktopOrMobile from "./DesktopMobile.vue"
+</script>
+
 <style scoped lang="scss">
+    .Mobile__job {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        [alt="bonbon"] {
+            position: absolute;
+            top: 0;
+            right: -30px;
+        }
+
+        .for--img {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        font-size: 25px;
+    }
+
+    .Mobile__rock {
+        text-align: center;
+        font-size: 20px;
+
+        img {
+            margin: 0;
+        }
+    }
+
     .AppJob {
         display: grid;
         grid-template-columns: 1fr 594px 1fr;
@@ -163,6 +268,7 @@
 
         p {
             font-size: 30px;
-        margin-left: 50px;
+            margin-left: 50px;
+        }
     }
-}</style>
+</style>

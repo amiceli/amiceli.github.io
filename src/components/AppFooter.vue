@@ -40,5 +40,15 @@
                 text-align: right;
             }
         }
+
+        @include onlyMobile () {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 60px;
+            margin-bottom: 50px;
+
+            .for--rod {
+                display: none;
+            }
+        }
     }
 </style>

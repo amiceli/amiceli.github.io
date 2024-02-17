@@ -41,6 +41,11 @@
         font-family: 'Exo 2', sans-serif;
         color: #d8dee9;
         background: #2E3440;
+
+        @include onlyMobile () {
+            width: 100%;
+            overflow-x: hidden;
+        }
     }
 
     .for--rod {
