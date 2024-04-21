@@ -5,6 +5,34 @@ import TrackLink from './TrackLink.vue';
             <h1>
                 { Dev le jour, dev la nuit }
             </h1>
+
+            <h2 class="for--rod">
+                <TrackLink link="https://github.com/amiceli/vitest-cucumber">
+                    vitest-cucumber
+                </TrackLink>
+            </h2>
+
+            <p>
+                Les test Gherkin y a que ça de vrai !
+                <br>
+                Je ne trouvais pas d'outils pour créer des tests unitaires Gherkin avec <b>Vitest</b>.
+                <br>
+                Alors je me suis lançais sur le projet ;).
+            </p>
+
+            <h2 class="for--rod for--tic">
+                <TrackLink link="https://ticandretro.com">
+                    <img src="../assets/img/ticandretro.png"  />
+                    ticandretro.com
+                </TrackLink>
+            </h2>
+
+            <p>
+                Mon pote Jéjé tiens une boutique qui est le paradis du jeu vidéo !
+                <br>
+                Je me régale sur ce projet => Vue, Astro et Nest <3.
+            </p>
+
             <h2 class="for--rod">
                 <TrackLink link="https://poke.volpe.xyz/">
                     poke.volpe.xyz
@@ -15,38 +43,6 @@ import TrackLink from './TrackLink.vue';
                 Un projet pour tester Astro. J'utilise plusieurs frameworks pour voir comment ils <i>cohabitent</i>.
                 <br>
                 Je me suis amusé avec Astro et les pokémons ;).
-            </p>
-
-            <h2 class="for--rod">
-                <TrackLink link="https://beat-time.netlify.app/">
-                    beat-time.netlify.app
-                </TrackLink>
-            </h2>
-
-            <p>
-                Ce site propose une horloge assez particulière, elle repose sur le
-                <a
-                    href="https://www.wikiwand.com/fr/Heure_Internet"
-                    target="_blank"
-                >
-                    temps internet
-                </a> . <br>
-                En gros, 1 jour vaut 1000 beats.
-            </p>
-
-            <h2 class="for--rod">
-                <TrackLink link="https://github.com/amiceli/mailparser">
-                    mailparser
-                </TrackLink>
-            </h2>
-
-            <p>
-                Un outil qui permet de récupérer la signature d’un mail depuis un fichier EML. <br>
-                D’ailleurs si tu veux des signature hyper classes pour tes mails, viens chez <a
-                    href="https://letsignit.com/fr/"
-                    target="_blank"
-                >Letsignit</a>.
-                Y a pas mieux !
             </p>
 
             <h2 class="for--rod">
@@ -130,6 +126,13 @@ import TrackLink from "@/components/TrackLink.vue"
             h2 {
                 color : #5E81AC;
                 font-size: 40px;
+            }
+        }
+
+        .for--tic {
+            img {
+                width: 40px;
+                vertical-align: middle;
             }
         }
     }
