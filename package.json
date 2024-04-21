@@ -10,7 +10,7 @@
     "lint:fix": "biome check --apply src/"
   },
   "dependencies": {
-    "vue": "^3.4.22"
+    "vue": "^3.4.23"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.0",
@@ -19,6 +19,6 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "lefthook": "^1.6.10",
     "sass": "^1.75.0",
-    "vite": "^5.2.8"
+    "vite": "^5.2.10"
   }
 }
