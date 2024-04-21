@@ -127,7 +127,7 @@
 </template>
 
 <script setup>
-    import DesktopOrMobile from "./DesktopMobile.vue"
+import DesktopOrMobile from "./DesktopMobile.vue"
 </script>
 
 <style scoped lang="scss">

@@ -79,7 +79,7 @@ import TrackLink from './TrackLink.vue';
 </template>
 
 <script setup>
-    import TrackLink from '@/components/TrackLink.vue'
+import TrackLink from "@/components/TrackLink.vue"
 </script>
 
 <style lang="scss" scoped>

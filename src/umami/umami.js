@@ -2,7 +2,7 @@
 
 const isDev = import.meta.env.MODE === `development`
 
-function trackEvent (eventName, eventProperty) {
+function trackEvent(eventName, eventProperty) {
     if (isDev) {
         console.debug(`mock_umami_track_event`, eventName, eventProperty)
         return Promise.resolve()
@@ -11,7 +11,7 @@ function trackEvent (eventName, eventProperty) {
     return umami.track(eventName, eventProperty)
 }
 
-export function trackLink (url) {
+export function trackLink(url) {
     trackEvent(`open`, { url }).then(() => {
         window.open(url, `_blank`)
     })

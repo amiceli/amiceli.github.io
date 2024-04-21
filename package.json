@@ -6,9 +6,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint -c .eslintrc.js src/",
-    "lint:staged": "eslint -c .eslintrc.js",
-    "lint:fix": "eslint -c .eslintrc.js src/ --fix"
+    "lint": "biome check src/",
+    "lint:fix": "biome check --apply src/"
   },
   "dependencies": {
     "vue": "^3.4.22"

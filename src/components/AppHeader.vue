@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-    import TattooLogo from './TattooLogo.vue'
+import TattooLogo from "./TattooLogo.vue"
 </script>
 
 <style scoped lang="scss">

@@ -5,13 +5,13 @@
 </template>
 
 <script setup>
-    import { trackLink } from '@/umami/umami'
+import { trackLink } from "@/umami/umami"
 
-    const props = defineProps([`link`])
+const props = defineProps([`link`])
 
-    function trackClickLink () {
-        trackLink(props.link)
-    }
+function trackClickLink() {
+    trackLink(props.link)
+}
 </script>
 
 <style scoped>

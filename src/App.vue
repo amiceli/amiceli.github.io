@@ -12,14 +12,14 @@
 </template>
 
 <script setup>
-    import AppDescription from './components/AppDescription.vue'
-    import AppHeader from './components/AppHeader.vue'
-    import AppDetails from './components/AppDetails.vue'
-    import AppDev from './components/AppDev.vue'
-    import AppLavori from './components/AppLavori.vue'
-    import AppJobs from './components/AppJobs.vue'
-    import AppForever from './components/AppForever.vue'
-    import AppFooter from './components/AppFooter.vue'
+import AppDescription from "./components/AppDescription.vue"
+import AppDetails from "./components/AppDetails.vue"
+import AppDev from "./components/AppDev.vue"
+import AppFooter from "./components/AppFooter.vue"
+import AppForever from "./components/AppForever.vue"
+import AppHeader from "./components/AppHeader.vue"
+import AppJobs from "./components/AppJobs.vue"
+import AppLavori from "./components/AppLavori.vue"
 </script>
 
 <style lang="scss">
