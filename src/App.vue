@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-    import { onMounted } from 'vue'
     import AppDescription from './components/AppDescription.vue'
     import AppHeader from './components/AppHeader.vue'
     import AppDetails from './components/AppDetails.vue'
@@ -21,11 +20,6 @@
     import AppJobs from './components/AppJobs.vue'
     import AppForever from './components/AppForever.vue'
     import AppFooter from './components/AppFooter.vue'
-    import { trackVisit } from './umami/umami'
-
-    onMounted(() => {
-        trackVisit()
-    })
 </script>
 
 <style lang="scss">

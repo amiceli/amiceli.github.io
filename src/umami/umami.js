@@ -11,10 +11,6 @@ function trackEvent (eventName, eventProperty) {
     return umami.track(eventName, eventProperty)
 }
 
-export function trackVisit () {
-    trackEvent(`home`, {})
-}
-
 export function trackLink (url) {
     trackEvent(`open`, { url }).then(() => {
         window.open(url, `_blank`)
