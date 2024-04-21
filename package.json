@@ -6,7 +6,6 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "husky init",
     "lint": "eslint -c .eslintrc.js src/",
     "lint:staged": "eslint -c .eslintrc.js",
     "lint:fix": "eslint -c .eslintrc.js src/ --fix"
@@ -15,21 +14,12 @@
     "vue": "^3.4.22"
   },
   "devDependencies": {
-    "@amiceli/eslint-config-base": "^1.0.1",
-    "@amiceli/eslint-config-vue": "^2.0.0",
+    "@biomejs/biome": "1.7.0",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.24.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lefthook": "^1.6.10",
     "sass": "^1.75.0",
     "vite": "^5.2.8"
-  },
-  "lint-staged": {
-    "*.vue": "npm run lint:staged",
-    "*.js": "npm run lint:staged"
   }
 }
