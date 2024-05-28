@@ -8,6 +8,7 @@ import TrackLink from './TrackLink.vue';
 
             <h2 class="for--rod">
                 <TrackLink link="https://github.com/amiceli/vitest-cucumber">
+                    <img src="https://vitest-cucumber.miceli.click/logo.png" />
                     vitest-cucumber
                 </TrackLink>
             </h2>
@@ -129,10 +130,11 @@ import TrackLink from "@/components/TrackLink.vue"
             }
         }
 
-        .for--tic {
+        .for--rod {
             img {
                 width: 40px;
                 vertical-align: middle;
+                margin-right: 10px;
             }
         }
     }
