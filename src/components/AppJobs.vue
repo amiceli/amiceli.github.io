@@ -95,10 +95,6 @@
     <DesktopOrMobile>
         <template #desktop>
             <div class="AppJobDetails for--rod">
-                <img
-                    src="@/assets/img/bonbon.png"
-                    alt="bonbon"
-                >
                 <div>
                     <img
                         src="@/assets/img/rock.png"
