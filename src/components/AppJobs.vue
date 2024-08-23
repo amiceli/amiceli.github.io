@@ -10,11 +10,11 @@
                 </div>
                 <div class="AppJob__svg">
                     <img
-                        src="src/assets/img/ns.svg"
+                        src="/img/ns.svg"
                         alt="logo"
                     >
                     <img
-                        src="src/assets/img/lsi.svg"
+                        src="/img/lsi.svg"
                         alt="logo"
                     >
                 </div>
@@ -29,7 +29,7 @@
         <template #mobile>
             <div class="Mobile__job">
                 <div class="for--img">
-                    <img src="src/assets/img/ns.png">
+                    <img src="/img/ns.png">
                 </div>
                 <div>
                     <h2>
@@ -46,7 +46,7 @@
             </div>
             <div class="Mobile__job">
                 <div class="for--img">
-                    <img src="src/assets/img/lsi.png">
+                    <img src="/img/lsi.png">
                 </div>
                 <h2>Letsignit
                     <br>
@@ -80,7 +80,7 @@
                         Et sans super bonbon ^^
                     </p>
                     <img
-                        src="src/assets/img/bonbon.png"
+                        src="/img/bonbon.png"
                         alt="bonbon"
                     >
                 </div>
@@ -93,7 +93,7 @@
             <div class="AppJobDetails for--rod">
                 <div>
                     <img
-                        src="src/assets/img/rock.png"
+                        src="/img/rock.png"
                         alt="rock"
                     >
                     <p>
@@ -106,7 +106,7 @@
         <template #mobile>
             <div class="Mobile__rock">
                 <img
-                    src="src/assets/img/rock.png"
+                    src="/img/rock.png"
                     alt="rock"
                 >
                 <p>

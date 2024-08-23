@@ -5,13 +5,13 @@
         </div>
         <TrackLink link="https://dev.to/amiceli">
             <img
-                src="src/assets/img/dev.svg"
+                src="/img/dev.svg"
                 alt="dev.to"
             >
         </TrackLink>
         <TrackLink link="https://github.com/amiceli">
             <img
-                src="src/assets/img/github.svg"
+                src="/img/github.svg"
                 alt="Github"
             >
         </TrackLink>

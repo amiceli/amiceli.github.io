@@ -27,7 +27,7 @@ import AppLavori from "./components/AppLavori.vue"
 
     @font-face {
         font-family: 'Kbanavoxlost';
-        src: url('../src/assets/font/Kbanavoxlost-gajq.ttf') format('woff');
+        src: url('/font/Kbanavoxlost-gajq.ttf') format('woff');
     }
 
     html,

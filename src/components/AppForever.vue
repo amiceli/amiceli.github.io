@@ -22,7 +22,7 @@
 
             <h2 class="for--rod for--tic">
                 <TrackLink link="https://ticandretro.com">
-                    <img src="src/assets/img/ticandretro.png"  />
+                    <img src="/img/ticandretro.png"  />
                     ticandretro.com
                 </TrackLink>
             </h2>
