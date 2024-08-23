@@ -168,7 +168,7 @@ import DesktopOrMobile from "./DesktopMobile.vue"
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
-            background-image: url('../assets/img/ns.png');
+            background-image: url('/img/ns.png');
             background-repeat: no-repeat;
             background-position: center;
             background-position-y: 150px;
@@ -177,7 +177,7 @@ import DesktopOrMobile from "./DesktopMobile.vue"
         &>div:nth-child(3) {
             display: flex;
             align-items: flex-end;
-            background-image: url('../assets/img/lsi.png');
+            background-image: url('/img/lsi.png');
             background-repeat: no-repeat;
             background-position: center;
         }
