@@ -1,4 +1,3 @@
-import TrackLink from './TrackLink.vue';
 <template>
     <div class="AppForever">
         <div class="AppForever__projects">
@@ -23,7 +22,7 @@ import TrackLink from './TrackLink.vue';
 
             <h2 class="for--rod for--tic">
                 <TrackLink link="https://ticandretro.com">
-                    <img src="../assets/img/ticandretro.png"  />
+                    <img src="src/assets/img/ticandretro.png"  />
                     ticandretro.com
                 </TrackLink>
             </h2>
@@ -76,7 +75,7 @@ import TrackLink from './TrackLink.vue';
 </template>
 
 <script setup>
-import TrackLink from "@/components/TrackLink.vue"
+import TrackLink from "./TrackLink.vue"
 </script>
 
 <style lang="scss" scoped>

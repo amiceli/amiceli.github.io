@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { trackLink } from "@/umami/umami"
+import { trackLink } from "../umami/umami"
 
 const props = defineProps([`link`])
 

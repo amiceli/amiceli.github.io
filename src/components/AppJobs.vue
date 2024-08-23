@@ -10,11 +10,11 @@
                 </div>
                 <div class="AppJob__svg">
                     <img
-                        src="@/assets/img/ns.svg"
+                        src="src/assets/img/ns.svg"
                         alt="logo"
                     >
                     <img
-                        src="@/assets/img/lsi.svg"
+                        src="src/assets/img/lsi.svg"
                         alt="logo"
                     >
                 </div>
@@ -29,7 +29,7 @@
         <template #mobile>
             <div class="Mobile__job">
                 <div class="for--img">
-                    <img src="@/assets/img/ns.png">
+                    <img src="src/assets/img/ns.png">
                 </div>
                 <div>
                     <h2>
@@ -46,7 +46,7 @@
             </div>
             <div class="Mobile__job">
                 <div class="for--img">
-                    <img src="@/assets/img/lsi.png">
+                    <img src="src/assets/img/lsi.png">
                 </div>
                 <h2>Letsignit
                     <br>
@@ -57,10 +57,6 @@
                     Arrivé comme dev front et devenir Lead, puis Manager !<br>
                     Et sans super bonbon ^^
                 </p>
-                <img
-                    src="@/assets/img/bonbon.png"
-                    alt="bonbon"
-                >
             </div>
         </template>
     </DesktopOrMobile>
@@ -84,7 +80,7 @@
                         Et sans super bonbon ^^
                     </p>
                     <img
-                        src="@/assets/img/bonbon.png"
+                        src="src/assets/img/bonbon.png"
                         alt="bonbon"
                     >
                 </div>
@@ -97,7 +93,7 @@
             <div class="AppJobDetails for--rod">
                 <div>
                     <img
-                        src="@/assets/img/rock.png"
+                        src="src/assets/img/rock.png"
                         alt="rock"
                     >
                     <p>
@@ -110,7 +106,7 @@
         <template #mobile>
             <div class="Mobile__rock">
                 <img
-                    src="@/assets/img/rock.png"
+                    src="src/assets/img/rock.png"
                     alt="rock"
                 >
                 <p>

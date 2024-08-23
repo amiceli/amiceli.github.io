@@ -5,13 +5,13 @@
         </div>
         <TrackLink link="https://dev.to/amiceli">
             <img
-                src="@/assets/img/dev.svg"
+                src="src/assets/img/dev.svg"
                 alt="dev.to"
             >
         </TrackLink>
         <TrackLink link="https://github.com/amiceli">
             <img
-                src="@/assets/img/github.svg"
+                src="src/assets/img/github.svg"
                 alt="Github"
             >
         </TrackLink>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import TrackLink from "@/components/TrackLink.vue"
+import TrackLink from "./TrackLink.vue"
 </script>
 
 <style lang="scss" scoped>
