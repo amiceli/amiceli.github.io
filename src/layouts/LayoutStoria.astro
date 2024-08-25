@@ -18,13 +18,21 @@ const { title } = Astro.props
         <script async type="application/javascript" src="https://plausible.volpe.xyz/script.js" data-website-id="b8875c72-2935-418c-8464-215526912cf7" data-domains="miceli.click"></script>
     </head>
     <body>
-        <div class="App">
+        <header>
+            <img src="/img/profile.jpeg" alt="moi" />
+            <div>
+                <a target="_blank" href="/storia">Storie</a>
+                <span>/</span>
+                <span>tivu-ui</span>
+            </div>
+        </header>
+        <div class="App for--storia">
             <slot />
         </div>
     </body>
 </html>
 
-<style lang="scss">
+<style lang="scss" is:global>
     @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&display=swap");
 
     @font-face {
@@ -42,11 +50,23 @@ const { title } = Astro.props
             width: 100%;
             overflow-x: hidden;
         }
+
+        a {
+            color : #5e81ac;
+        }
     }
 
-    .for--rod {
-        font-family: "Kbanavoxlost";
-        font-weight: 800;
+    .for--storia {
+        font-size: 25px;
+
+        h1 {
+            font-size: 40px;
+            color: #3be2a0;
+        }
+        h2 {
+            font-size: 35px;
+            color: #3be2a0;
+        }
     }
 </style>
 
@@ -57,4 +77,37 @@ const { title } = Astro.props
         padding-top: 100px;
         padding-bottom: 100px;
     }
+    header {
+        height: 60px;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img + div {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
 </style>
+
