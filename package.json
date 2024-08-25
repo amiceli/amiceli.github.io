@@ -12,6 +12,7 @@
     "lint:fix": "biome check --write src/"
   },
   "dependencies": {
+    "@astrojs/mdx": "^3.1.4",
     "@astrojs/vue": "^4.5.0",
     "astro": "^4.14.5",
     "vue": "^3.4.38"
