@@ -1,0 +1,52 @@
+---
+const { title, open, img } = Astro.props;
+---
+
+<details open={open} class={img ? "with--img" : ""}>
+    <summary>
+        {img && <img src={img} />}
+        {title}
+    </summary>
+    <div class="content">
+        <slot />
+    </div>
+</details>
+
+<style scoped lang="scss">
+    details {
+        margin-bottom: 20px;
+
+        summary {
+            border-bottom: 1px #3be2a0 solid;
+            padding-bottom: 10px;
+        }
+
+        &.with--img {
+            margin-bottom: 20px;
+
+            & > .content {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            & > summary {
+                list-style: none;
+                padding: 20px 20px 20px 0;
+                border-bottom: 1px #3be2a0 solid;
+                cursor: pointer;
+
+                &::-webkit-details-marker {
+                    display: none; // Remove arrow
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                    vertical-align: middle;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+</style>
