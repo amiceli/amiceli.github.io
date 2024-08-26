@@ -1,0 +1,143 @@
+import LayoutStoria from "../../layouts/LayoutStoria.astro";
+import DetailsSum from '../../components/DetailsSum.astro'
+
+<LayoutStoria title="miceli.click" storia="tivu">
+    # Piccoli occhi - tivu
+
+    Aujourd'hui je vais raconter l'histoire du projet
+    [tivu](https://tivu.volpe.xyz/).
+
+    ## Pourquoi ce projet ?
+
+    Pour faire simple, j'ai un problème de vue casse couille depuis début 2023.
+
+    Certaines applications gèrent bien la notion de zoom ou de la taille de police,
+    sauf les applications pour le programme télé.
+
+    Solution du dev : *ok j'attaque un projet*
+
+    ## On attaque
+
+    L'histoire du projet je l'ai découpé en trois parties : tech, ux et le challenge pour l'accessibilité.
+            
+    <DetailsSum 
+        img="/img/storia/tech.png" 
+        title="Tome 1 - la tech : le choix des frameworks, les challenges"
+        open
+    >
+
+        ### Le choix de framework
+
+        Ça c'était le plus simple, j'ai pris ceux avec lesquels j'adore développer : Astro, NestJS et mongo pour la bdd.
+
+        #### Astro
+
+        Astro c'est le graal ce framework. C'est pas le but de cet article mais niveau maintenance / migration d'un projet c'est imbattable. On peut utiliser plusieurs framework comme Vue, Scelte, etc. [poke-astro](https://github.com/amiceli/poke-astro) un exemple de projet ou j'ai testé Astro avant de l'adopter.
+
+        Astro recommande nanostores dans sa [doc](https://docs.astro.build/en/recipes/sharing-state-islands/), niveau agnostique c'est le top.
+
+        #### NestJS
+
+        Pour la partie back, NestJS premier choix. Déjà je suis 99% front, le back c'est pas mon délire et surtout il me fallait du TS ;).
+
+        Plus je travaille avec ce framework plus c'est un régale : 
+        - connexion à mongo + les schémas
+        - Injection des dépendances
+        - Cron / Scheduling
+        - logger
+        - etc
+
+        ### Récupérer la liste des chaînes et les programmes
+
+        Premier challenge, récupérer le guide télé (chaînes + programmes). J'ai trouvé des Apis mais soit c'était payant soit chiant à intégrer (pour moi).
+
+        Et j'ai découvert [xml-tv-fr](https://github.com/racacax/XML-TV-Fr?tab=readme-ov-file). Open source et fournit un XML avec plus de 1000 chaînes et un paquet de programmes pour plusieurs jours, un régale !
+
+        J'ajoute un cron via NestJS qui récupère le XML, le transfrome en JSON et met à jour la bdd. Il y a tout dedans les dates, images pour la chaîne, le programme, les catégories etc.
+
+        Un exemple du XML : 
+
+        <DetailsSum title="XML pour une chaîne" open>
+            <img src="/img/storia/xml-channel.png" style="width : 100%" />
+        </DetailsSum>
+
+        <DetailsSum title="XML pour un programme télé">
+            <img src="/img/storia/xml-program.png" style="width : 70%" />
+        </DetailsSum>
+
+        Tout se passe bien, première mise en prod via [coolify](https://coolify.io/) et BAM, premier bug.
+
+        Transformer un fichier XML d'environ 100mo et 1782170 lignes en local aucun problème, dans le container docker sur la prod ça passe pas ^^.
+
+        Ça faisait claquer le moteur v8 de node et là mon pote de taff **Mathieu** m'a aidé en me parlant de [sax](https://github.com/isaacs/sax-js).
+
+        On arrête le JSON, on lit le fichier ligne par ligne, on détecte les `channel`, `program` ou encore `category`. Je transforme ça en modèle pour mongo : [code du parser](https://github.com/piccoli-occhi/tivu-api/blob/main/src/xml/parser.ts).
+
+        ### Scrap des images
+
+        Niveau UI j'ai eu droits à des **CORS** pour afficher les images remontées dans le XML. Dans le cron je télécharger les images avec un `createWriteStream`, je les stock côté back et je met à jour les urls pour les chaînes / programmes niveau bdd.
+
+        Fan du dark mode j'ai également utilisé `colorthief` pour détecter les images sombres et inverser les couleurs pour qu'elle soit plus visible avec `filter: invert(1)`.
+
+        ### Api de Omdb
+
+        Après plusieurs mois sur le projet j'ai cherché comment ajouter le score d'un programme sur **tivu**.
+
+        Galère comme pas possible, Imddb il faut un compte AWS pour y aboir d'accès, d'autre il faut créé une application avec Oauth. ou payer.
+
+        J'ai tenté un scrapper de Imdb avec puppeeyer, facile à code mais assez vite ils l'ont capté et ça marche plus.
+
+        Finalement j'ai toruvé [omdb](https://www.omdb.org/fr/fr), Ll faut juste s'inscrire pour avoir une clé d'api.
+
+        Ce n'est pas aussi rempli que Imdb mais l'intégration est rapide, je me tâte même à [participer](https://www.omdb.org/fr/fr/content/Help:BecomeAuthor) à ce projet.
+
+        ### Tests unitaires
+
+        Faut que je m'y remette mais fan de Gherkin j'utilise [vitest-cucumber](https://github.com/amiceli/vitest-cucumber), un projet que je maintiens toujours.
+
+        Mais surtout dédicace à [mongodb-memory-server](https://github.com/typegoose/mongodb-memory-server), pour faire les tests côté back sans devoir lancer ou mocker mongo. Cette lib est le top pour les tests liés à la bdd.
+    </DetailsSum>
+
+    <DetailsSum
+        img="/img/storia/accessibility.png"
+        title="Tome 2 - UX / UI"
+    >
+        ## Figma
+
+        Comme je l'ai dit à mon pote Dani : *l'UX y a que ça de vrai*. Me lancer dans le projet sans faire de maquette, impossible.
+
+        En plus d'être un logiciel au top, il y a une comunauté où on peut s'inspirer, sans ça le projet aurait mis plus de temps. Des exemples que j'ai adoré : 
+
+        - Des [cards](https://www.figma.com/community/file/1097964499926853798) pour afficher les chaînes et les programmes
+        - [filering](https://www.figma.com/community/file/1285620501054277496) pour trier les chaînes par lettre
+
+        ## Em
+
+        J'ai parlé de shoelace et Figma mais surtout bip bip, faites du bruit pour **Em** !
+
+        Ma collègue de boulot, designer hors pair, celle avec qui je dois être le plus casse couilles au boulot.  Mais surtout celle qui m'aide pour chaque question UX.
+
+        Merci **Em** pour ton aide sur ce projet ;).
+
+        ## Shoelace
+
+        Côté UI je suis du côté des *web components*, ça évite d'être lié à un framework comme Vuetify par exemple.
+
+        Au début je suis parti sur [blueprint](https://github.com/blueprintui/blueprintui) mais certains composants ne fonctionnaient pas sur mobile ou sur certains navigateurs.
+
+        En fouillant github avec les fameuses pages **awesome**, j'ai découvert [shoelace](https://shoelace.style/) 🍾.
+
+        Y a la dose niveaux composants, au top pour la partie responsive et adaptative. 
+    </DetailsSum>
+
+    <DetailsSum
+        img="/img/storia/accessibility.png"
+        title="Tome 2 - Accessibilité"
+    >
+        ## La taille du texte
+
+        ## Interfaces adaptatives
+    </DetailsSum>
+</LayoutStoria>
+
+
