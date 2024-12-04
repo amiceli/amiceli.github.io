@@ -7,8 +7,11 @@
 
             <h2 class="for--rod">
                 <TrackLink link="https://github.com/amiceli/vitest-cucumber">
-                    <img src="https://vitest-cucumber.miceli.click/logo.png" />
+                    <img src="https://vitest-cucumber.miceli.click/_astro/logo.xz4thweI_1tCcsa.webp" />
                     vitest-cucumber
+                </TrackLink> / 
+                <TrackLink link="https://vitest-cucumber.miceli.click/">
+                    vitest-cucumber-doc
                 </TrackLink>
             </h2>
 
