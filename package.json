@@ -6,21 +6,21 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host 0.0.0.0",
     "astro": "astro",
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/"
   },
   "dependencies": {
-    "@astrojs/vue": "^5.0.3",
-    "astro": "^5.1.1",
+    "@astrojs/vue": "^5.0.6",
+    "astro": "5.1.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "lefthook": "^1.10.1",
-    "sass": "^1.83.0"
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "lefthook": "^1.11.0",
+    "sass": "^1.85.0"
   }
 }

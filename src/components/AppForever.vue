@@ -33,19 +33,21 @@
             <p>
                 Mon pote Jéjé tiens une boutique qui est le paradis du jeu vidéo !
                 <br>
-                Je me régale sur ce projet => Vue, Astro et Nest <3.
+                Je me régale sur ce projet => Vue, Astro et Nest ❤️.
             </p>
 
             <h2 class="for--rod">
-                <TrackLink link="https://poke.volpe.xyz/">
-                    poke.volpe.xyz
+                <TrackLink link="https://papier.miceli.click">
+                    <img src="/img/papierjs.webp" />
+                    PapierJS
                 </TrackLink>
             </h2>
 
             <p>
-                Un projet pour tester Astro. J'utilise plusieurs frameworks pour voir comment ils <i>cohabitent</i>.
-                <br>
-                Je me suis amusé avec Astro et les pokémons ;).
+                J'aime le framework <a href="https://www.getpapercss.com/">PaperCSS</a>, ça change de
+                Bootstrap, Fondation, etc. Toujours la même chose.
+                <br />
+                On prend PaperCSS, on rajoute Stencil et Storybbok et BAM ! PapierJS est né.
             </p>
 
             <h2 class="for--rod">
@@ -63,7 +65,7 @@
         <div class="AppForever__line for--rod">
             <div>
                 <b>FR</b> <br>
-                Langue maternelle, trop facile
+                Langue maternelle, trop facile, on peut y aller.
             </div>
             <div>
                 <b>IT</b> <br>
