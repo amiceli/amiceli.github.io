@@ -7,6 +7,9 @@ export default defineConfig({
         preview: {
             allowedHosts: true,
         },
+        server: {
+            allowedHosts: true,
+        },
         css: {
             preprocessorOptions: {
                 scss: {
