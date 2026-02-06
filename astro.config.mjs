@@ -4,12 +4,6 @@ import { defineConfig } from "astro/config"
 // https://astro.build/config
 export default defineConfig({
     vite: {
-        preview: {
-            allowedHosts: true,
-        },
-        server: {
-            allowedHosts: true,
-        },
         css: {
             preprocessorOptions: {
                 scss: {
@@ -27,4 +21,7 @@ export default defineConfig({
     },
     base: "/",
     integrations: [vue()],
+    server: {
+        allowedHosts: ["miceli.click"],
+    },
 })
