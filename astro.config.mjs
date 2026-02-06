@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config"
 export default defineConfig({
     vite: {
         preview: {
-            allowedHosts: ["miceli.click"],
+            allowedHosts: true,
         },
         css: {
             preprocessorOptions: {
