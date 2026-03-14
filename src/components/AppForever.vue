@@ -2,14 +2,22 @@
     <div class="AppForever">
         <div class="AppForever__projects">
             <h1>
-                { Dev le jour, dev la nuit }
+                <img
+                    src="/img/baby.png"
+                    alt="baby"
+                >
+                { Artisan développeur, pas d'IA }
+                <img
+                    src="/img/baby.png"
+                    alt="baby"
+                >
             </h1>
 
             <h2 class="for--rod">
                 <TrackLink link="https://github.com/amiceli/vitest-cucumber">
                     <img src="https://vitest-cucumber.miceli.click/_astro/logo.xz4thweI_Z1ncqm.webp" />
                     vitest-cucumber
-                </TrackLink> / 
+                </TrackLink> /
                 <TrackLink link="https://vitest-cucumber.miceli.click/">
                     vitest-cucumber-doc
                 </TrackLink>
@@ -25,7 +33,7 @@
 
             <h2 class="for--rod for--tic">
                 <TrackLink link="https://ticandretro.com">
-                    <img src="/img/ticandretro.png"  />
+                    <img src="/img/ticandretro.png" />
                     ticandretro.com
                 </TrackLink>
             </h2>
@@ -101,62 +109,72 @@ import TrackLink from "./TrackLink.vue"
 </script>
 
 <style lang="scss" scoped>
-    .AppForever {
-        &__line {
-            display: flex;
-            align-items: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
+.AppForever {
+    &__line {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        div {
+            flex: 1;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        @include onlyMobile () {
+            display: unset;
+            margin-bottom: 0;
 
             div {
-                flex: 1;
-                text-align: center;
-                font-size: 30px;
-            }
+                margin-bottom: 20px;
 
-            @include onlyMobile () {
-                display: unset;
-                margin-bottom: 0;
+                b {
+                    display: block;
+                    text-align: center;
+                }
 
-                div {
-                    margin-bottom: 20px;
-                    b {
-                        display: block;
-                        text-align: center;
-                    }
-                    br {
-                        display: none;
-                    }
+                br {
+                    display: none;
                 }
             }
         }
+    }
 
-        &__projects {
-            margin-bottom: 70px;
+    &__projects {
+        margin-bottom: 70px;
 
-            h1 {
-                text-align: center;
-                font-size: 50px;
-            }
-            a {
-                color : #5E81AC !important;
-                text-decoration: none;
-            }
-            p {
-                font-size: 25px;
-            }
-            h2 {
-                color : #5E81AC;
-                font-size: 40px;
-            }
+        h1 {
+            text-align: center;
+            font-size: 50px;
         }
 
-        .for--rod {
-            img {
-                width: 40px;
-                vertical-align: middle;
-                margin-right: 10px;
-            }
+        img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        a {
+            color: #86A372 !important;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        h2 {
+            color: #86A372;
+            font-size: 40px;
         }
     }
+
+    .for--rod {
+        img {
+            width: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+}
 </style>

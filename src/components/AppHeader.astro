@@ -3,16 +3,13 @@ import TattooLogo from "./TattooLogo.astro"
 ---
 
 <div class="AppHeader">
+    <div class="AppHeader__flower">
+        <img src="/img/profile.jpeg" alt="moi" />
+        <img src="/img/potos.png" alt="moi" />
+    </div>
     <div class="AppHeader__tattoo">
         <TattooLogo />
-        <div class="tattoo__text">
-            <img src="/img/cocafe.png" alt="cafe" />
-            <p class="for--rod">
-                Un café si tu veux savoir à quoi ça correspond ;)
-            </p>
-        </div>
     </div>
-    <img src="/img/profile.jpeg" alt="moi" />
 </div>
 
 <style scoped lang="scss">
@@ -23,40 +20,15 @@ import TattooLogo from "./TattooLogo.astro"
         justify-content: center;
 
         &__tattoo {
+            margin-left: 100px;
+        }
+
+        &__flower {
             position: relative;
+            width: 150px;
 
-            & + img {
-                margin-left: 200px;
-            }
-
-            .tattoo__text {
-                position: absolute;
-                left: 0;
-                bottom: -70px;
-                display: grid;
-                grid-template-columns: max-content max-content;
-                grid-gap: 20px;
-                align-items: center;
-
-                @include onlyMobile() {
-                    display: unset;
-                    position: unset;
-                    text-align: center;
-                }
-
-                p {
-                    opacity: 0.4;
-                }
-
-                img {
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 46px;
-                }
-            }
-
-            & + img {
-                width: 150px;
+            img:first-of-type {
+                width: 100%;
                 border-radius: 150px;
                 box-shadow:
                     rgba(0, 0, 0, 0.07) 0px 1px 2px,
@@ -65,6 +37,13 @@ import TattooLogo from "./TattooLogo.astro"
                     rgba(0, 0, 0, 0.07) 0px 8px 16px,
                     rgba(0, 0, 0, 0.07) 0px 16px 32px,
                     rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            }
+
+            img:last-of-type {
+                position: absolute;
+                width: 200px;
+                top: -50px;
+                left: -50px;
             }
         }
 
