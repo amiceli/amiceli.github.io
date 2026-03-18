@@ -67,5 +67,9 @@ const { title } = Astro.props
         top: 0;
         right: 0;
         width: 400px;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
     }
 </style>
