@@ -76,7 +76,7 @@
             </p>
 
             <h2 class="for--rod">
-                <img src="public/img/piccolo.png" />
+                <img src="/img/piccolo.png" />
                 Et c’est pas tout
             </h2>
 
