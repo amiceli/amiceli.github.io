@@ -1,21 +1,14 @@
 ---
-import AppDescription from "../components/AppDescription.astro"
 import AppDetails from "../components/AppDetails.astro"
 import AppDev from "../components/AppDev.astro"
 import AppForever from "../components/AppForever.vue"
 import AppHeader from "../components/AppHeader.astro"
-import AppJobs from "../components/AppJobs.vue"
-import AppLavori from "../components/AppLavori.astro"
-import AppNav from "../components/AppNav.vue"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="miceli.click">
-    <AppNav client:only="vue" />
     <AppHeader />
-    <AppDescription />
     <AppDetails />
     <AppDev />
     <AppForever client:only="vue" />
-    
 </Layout>

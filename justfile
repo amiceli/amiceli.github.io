@@ -1,3 +1,6 @@
+install:
+    npm i
+
 biome:
     npx biome check --write
 

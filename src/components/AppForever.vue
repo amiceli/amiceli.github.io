@@ -6,7 +6,7 @@
                     src="/img/baby.png"
                     alt="baby"
                 >
-                { Artisan développeur, pas d'IA }
+                { Développeur web }
                 <img
                     src="/img/baby.png"
                     alt="baby"
@@ -15,7 +15,7 @@
 
             <h2 class="for--rod">
                 <TrackLink link="https://github.com/amiceli/vitest-cucumber">
-                    <img src="https://vitest-cucumber.miceli.click/_astro/logo.xz4thweI_Z1ncqm.webp" />
+                    <img src="https://vitest-cucumber.miceli.click/logo.png" />
                     vitest-cucumber
                 </TrackLink> /
                 <TrackLink link="https://vitest-cucumber.miceli.click/">
@@ -67,7 +67,7 @@
 
             <p>
                 Preums rappelle aux dev ques coder c'est chercher, découvrir, créer et refaire <br>
-                Et pas utiliser l'IA pour chaque action comme une feignasse.
+                Et pas utiliser l'IA pour chaque action.
             </p>
 
             <p>
@@ -76,6 +76,7 @@
             </p>
 
             <h2 class="for--rod">
+                <img src="public/img/piccolo.png" />
                 Et c’est pas tout
             </h2>
 
@@ -83,21 +84,24 @@
                 Si t’as le temps, jette un oeil sur mon
                 <TrackLink link="https://github.com/amiceli">
                     github
+                </TrackLink>
+                ou
+                <TrackLink link="https://dev.to/amiceli">
+                    dev.to
                 </TrackLink>.
-                Y a des outils en ligne de commande pour les dev, le terminal y a que ça de vrai !
             </p>
         </div>
         <div class="AppForever__line for--rod">
             <div>
-                <b>FR</b> <br>
-                Langue maternelle, trop facile, on peut y aller.
+                <b>🇫🇷</b> <br>
+                Langue maternelle, trop facile
             </div>
             <div>
-                <b>IT</b> <br>
+                <b>🇮🇹</b> <br>
                 Se non parliamo di lavoro, va bene
             </div>
             <div>
-                <b>EN</b> <br>
+                <b>🏴󠁧󠁢󠁥󠁮󠁧󠁿</b> <br>
                 If we speak technical, no problem
             </div>
         </div>
