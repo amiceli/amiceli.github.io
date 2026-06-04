@@ -66,6 +66,21 @@ body {
     align-items: center;
 }
 
+@media (pointer:none), (pointer:coarse) {
+    .app__welcome {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .app__welcome img {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .app__welcome img {
     max-width: 600px;
 }

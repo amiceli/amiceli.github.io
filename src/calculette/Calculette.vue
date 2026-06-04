@@ -67,6 +67,12 @@ function updateScreen(value: string) {
 </script>
 
 <style scoped>
+@media (pointer:none), (pointer:coarse) {
+    .calculette {
+        transform: scale(80%);
+    }
+}
+
 .wrapper {
     display: flex;
     justify-content: center;

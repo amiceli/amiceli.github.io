@@ -130,6 +130,13 @@ import TrackLink from '@/components/TrackLink.vue'
     margin-right: auto;
 }
 
+@media (pointer:none),
+(pointer:coarse) {
+    .dev-project__item {
+        width: 90%;
+    }
+}
+
 .dev-project__item h2 {
     font-size: 30px;
 }
@@ -159,6 +166,19 @@ import TrackLink from '@/components/TrackLink.vue'
     font-size: 20px;
     gap: 30px;
 }
+
+@media (pointer:none),
+(pointer:coarse) {
+    .dev-project__lang {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: unset;
+    }
+    .dev-project__lang div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .dev-project__lang div {
     text-align: center;
 }
