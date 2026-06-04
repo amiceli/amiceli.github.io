@@ -10,4 +10,4 @@ dev:
 run:
     tmux new-session -d -s "miceli"
     tmux send-keys -t "miceli" "npm run dev" ENTER
-    open "http://localhost:4321/"
+    open "http://localhost:5173"

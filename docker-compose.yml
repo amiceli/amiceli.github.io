@@ -1,8 +1,0 @@
-services:
-  miceli:
-    platform: "linux/amd64"
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "4321:4321"
