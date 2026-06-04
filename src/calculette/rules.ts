@@ -69,26 +69,6 @@ export const rules: Record<number, RuleEntry> = {
     [valueMap[Languages.PHP] + valueMap[Frameworks.LARAVEL]]: preums,
     [valueMap[Frameworks.VUE] + valueMap[Languages.PHP]]: preums,
 
-    // Blagues
-    [valueMap[Frameworks.VUE] + valueMap[Frameworks.VUE]]: {
-        name: 'Lunette',
-    },
-    [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GHERKIN]]: {
-        name: 'Cocombre',
-    },
-    [valueMap[Frameworks.DOCKER] + valueMap[Frameworks.DOCKER]]: {
-        name: 'Viexu port',
-    },
-    [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GITLAB]]: {
-        name: 'Labeur ?',
-    },
-    [valueMap[Frameworks.STENCIL] + valueMap[Frameworks.DOCKER]]: {
-        name: 'Fada !',
-    },
-    [valueMap[Languages.PHP] + valueMap[Languages.TYPESCRIPT]]: {
-        name: '❤️',
-    },
-
     // nuova-casa
     [valueMap[Frameworks.VUE] + valueMap[Frameworks.LARAVEL]]: {
         name: 'nuova-casa',
@@ -109,5 +89,44 @@ export const rules: Record<number, RuleEntry> = {
         name: 'Histoire ❤️',
         website: 'https://histoire.dev/',
         repository: 'https://github.com/histoire-dev/histoire',
+    },
+
+    // Idées
+    [valueMap[Awesome.GHERKIN] +
+        valueMap[Awesome.GITLAB] +
+        valueMap[Languages.JAVASCRIPT] +
+        valueMap[Frameworks.DOCKER]]: {
+        name: 'Behavior Driven Development',
+    },
+    [valueMap[Frameworks.STENCIL] +
+        valueMap[Frameworks.VUE] +
+        valueMap[Languages.TYPESCRIPT]]: {
+        name: 'Component Driven Development',
+    },
+
+    // Blagues
+    [valueMap[Frameworks.VUE] + valueMap[Frameworks.VUE]]: {
+        name: 'Déjà Vue',
+    },
+    [valueMap[Frameworks.VUE] * 3]: {
+        name: 'Vuezela',
+    },
+    [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GHERKIN]]: {
+        name: 'Cocombre',
+    },
+    [valueMap[Frameworks.DOCKER] + valueMap[Frameworks.DOCKER]]: {
+        name: 'Doublecker',
+    },
+    [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GITLAB]]: {
+        name: 'Labeur ?',
+    },
+    [valueMap[Frameworks.STENCIL] + valueMap[Frameworks.DOCKER]]: {
+        name: 'Fada !',
+    },
+    [valueMap[Languages.PHP] + valueMap[Languages.TYPESCRIPT]]: {
+        name: '❤️',
+    },
+    [valueMap[Languages.JAVASCRIPT] + valueMap[Languages.TYPESCRIPT]]: {
+        name: 'PreniumJS',
     },
 }
