@@ -1,26 +1,57 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
-    "assist": { "actions": { "source": { "organizeImports": "on" } } },
+    "$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
     "files": {
-        "includes": ["**", "!**/package.json", "!**/package-lock.json", "!**/dist", "!**/.astro"]
+        "ignoreUnknown": false,
+        "includes": [
+            "**",
+            "!old",
+            "!src/shims-vue.d.ts"
+        ]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "expand": "always"
     },
     "linter": {
         "enabled": true,
         "rules": {
-            "recommended": true,
-            "style": {
-                "noUnusedTemplateLiteral": "off"
-            }
+            "recommended": true
         }
-    },
-    "formatter": {
-        "indentStyle": "space",
-        "indentWidth": 4,
-        "lineWidth": 320
     },
     "javascript": {
         "formatter": {
-            "semicolons": "asNeeded"
+            "semicolons": "asNeeded",
+            "quoteStyle": "single"
         }
-    }
+    },
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "source": {
+                "organizeImports": "on"
+            }
+        }
+    },
+    "overrides": [
+        {
+            "includes": [
+                "**/*.vue"
+            ],
+            "linter": {
+                "rules": {
+                    "correctness": {
+                        "noUnusedImports": "off",
+                        "noUnusedVariables": "off"
+                    }
+                }
+            }
+        }
+    ]
 }
