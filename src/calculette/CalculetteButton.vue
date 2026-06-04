@@ -44,11 +44,11 @@ function handleClick() {
 
 <style scoped>
 button {
-    background: transparent;
+    background: yellow;
     box-sizing: none;
     height: 45px;
     border-radius: 15px;
-    border: 3px #000009 solid;
+    border-color : var(--border-color) !important;
     display: grid;
     grid-template-columns: 90%;
     align-items: center;

@@ -70,13 +70,13 @@
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    background: white;
+    background: transparent;
     text-align: center;
     margin-top: 100px;
 }
 
 .dev-footer svg * {
-    fill: black;
+    fill: var(--svg-fill);
 }
 
 .dev-footer svg {
