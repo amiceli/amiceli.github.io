@@ -55,7 +55,7 @@
         <br>
         <div class="for--coffee">
             <span class="doodle--text">
-                Si tu reconnais ce dessin je te paye un café
+                Si tu reconnais ce dessin, je te paie un café.
             </span>
             <img src="/assets/coffeescript.svg" alt="coffeescript">
         </div>
