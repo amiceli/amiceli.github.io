@@ -125,7 +125,7 @@ export const rules: Record<number, RuleEntry> = {
         name: 'Doublecker',
     },
     [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GITLAB]]: {
-        name: 'Labeur ?',
+        name: 'GitLabeur',
     },
     [valueMap[Frameworks.STENCIL] + valueMap[Frameworks.DOCKER]]: {
         name: 'Fada !',
