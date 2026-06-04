@@ -1,12 +1,10 @@
 pre-commit:
   parallel: true
-  commands:
-    biome:
+  jobs:
+    - name: biome
       run: "npm run lint"
-      include: "src/**"
 
 commit-msg:
-  commands:
-    commitlint:
-      run: "npx --no-install commitlint --edit $1"
-      include: ".git/COMMIT_EDITMSG"
+  jobs:
+    - name: commitlint
+      run: 'npx --no-install commitlint --edit $1'
