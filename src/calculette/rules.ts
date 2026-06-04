@@ -46,58 +46,68 @@ export type RuleEntry = {
     website?: string
 }
 
+const preums: RuleEntry = {
+    name: 'Preums',
+    website: 'https://preums.miceli.click/',
+    repository: 'https://github.com/amiceli/preums',
+}
+
+const vitestCucumber: RuleEntry = {
+    name: 'vitest-cucumber',
+    repository: 'https://github.com/amiceli/vitest-cucumber',
+    website: 'https://vitest-cucumber.miceli.click/',
+}
+
+const papierjs: RuleEntry = {
+    name: 'PapierJS',
+    repository: 'https://github.com/amiceli/papierjs',
+    website: 'https://papier.miceli.click/',
+}
+
 export const rules: Record<number, RuleEntry> = {
-    [valueMap[Languages.PHP] + valueMap[Frameworks.LARAVEL]]: {
-        name: 'la base !',
-    },
+    // Preums
+    [valueMap[Languages.PHP] + valueMap[Frameworks.LARAVEL]]: preums,
+    [valueMap[Frameworks.VUE] + valueMap[Languages.PHP]]: preums,
+
+    // Blagues
     [valueMap[Frameworks.VUE] + valueMap[Frameworks.VUE]]: {
         name: 'Lunette',
     },
     [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GHERKIN]]: {
         name: 'Cocombre',
     },
+    [valueMap[Frameworks.DOCKER] + valueMap[Frameworks.DOCKER]]: {
+        name: 'Viexu port',
+    },
     [valueMap[Frameworks.DOCKER] + valueMap[Awesome.GITLAB]]: {
         name: 'Labeur ?',
     },
-    // laravel (16) + vue (8) = 24
-    24: {
+    [valueMap[Frameworks.STENCIL] + valueMap[Frameworks.DOCKER]]: {
+        name: 'Fada !',
+    },
+    [valueMap[Languages.PHP] + valueMap[Languages.TYPESCRIPT]]: {
+        name: '❤️',
+    },
+
+    // nuova-casa
+    [valueMap[Frameworks.VUE] + valueMap[Frameworks.LARAVEL]]: {
         name: 'nuova-casa',
         repository: 'https://github.com/piccoli-occhi/nuova-casa',
     },
-    // gitlab (128) / laravel (16) = 8
-    8: {
-        name: '😱',
-    },
-    // typescript (4) + gherkin (256) = 260
-    260: {
-        name: 'vitest-cucumber',
-        repository: 'https://github.com/amiceli/vitest-cucumber',
-        website: 'https://vitest-cucumber.miceli.click/',
-    },
-    // docker (32) + stencil (64) = 96
-    96: {
-        name: 'Fada !',
-    },
-    // typescript (4) + stencil (64) = 68
-    68: {
-        name: 'PapierJS',
-        repository: 'https://github.com/amiceli/papierjs',
-        website: 'https://papier.miceli.click/',
-    },
-    // stencil (64) + vue (8) = 72
-    72: {
+
+    // papierjs
+    [valueMap[Frameworks.STENCIL] + valueMap[Languages.TYPESCRIPT]]: papierjs,
+
+    // vitest-cucumber
+    [valueMap[Awesome.GHERKIN] + valueMap[Languages.TYPESCRIPT]]:
+        vitestCucumber,
+    [valueMap[Awesome.GHERKIN] + valueMap[Languages.JAVASCRIPT]]:
+        vitestCucumber,
+
+    // Histoire
+    [valueMap[Frameworks.VUE] + valueMap[Frameworks.STENCIL]]: {
         name: 'Histoire ❤️',
         website: 'https://histoire.dev/',
         repository: 'https://github.com/histoire-dev/histoire',
-    },
-    // javascript (1) + gherkin (256) = 257
-    257: {
-        name: 'vitest-cucumber',
-        repository: 'https://github.com/amiceli/vitest-cucumber',
-        website: 'https://vitest-cucumber.miceli.click/',
-    },
-    // php (2) + javascript (1) = 3
-    3: {
-        name: '❤️',
     },
 }
