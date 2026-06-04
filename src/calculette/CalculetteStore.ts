@@ -47,7 +47,7 @@ export class CalculetteStore {
         Actions.ADD,
     ])
 
-    public readonly values = atom<string[]>([])
+    public readonly finished = atom(false)
 
     public readonly screen = atom<string>(ScreenMessage.DEFAULT_VALUE)
 
@@ -123,7 +123,8 @@ export class CalculetteStore {
 
     public clearValue(): void {
         this.screen.set(ScreenMessage.DEFAULT_VALUE)
-        this.values.set([])
+        this.finished.set(false)
+        this.currentRule.set(null)
     }
 
     public openRepository() {
@@ -159,6 +160,13 @@ export class CalculetteStore {
         const currentValue = this.screen.get()
         const isAction = Object.values(Actions).includes(val as Actions)
 
+        if (this.finished.get() && !isAction) {
+            this.clearValue()
+            this.screen.set(val)
+
+            return
+        }
+
         if (this.isInit.get()) {
             if (!isAction) {
                 this.screen.set(val)
@@ -181,9 +189,7 @@ export class CalculetteStore {
 
                 this.currentRule.set(rule)
                 this.screen.set(rule?.name ?? ScreenMessage.ERROR)
-                this.values.set([
-                    currentValue,
-                ])
+                this.finished.set(true)
             } catch {
                 this.screen.set(ScreenMessage.ERROR)
             }
