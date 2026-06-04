@@ -1,9 +1,4 @@
-import {
-    atom,
-    computed,
-    type ReadableAtom,
-    type WritableAtom,
-} from 'nanostores'
+import { atom, computed } from 'nanostores'
 import {
     Actions,
     Awesome,

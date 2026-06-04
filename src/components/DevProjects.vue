@@ -152,12 +152,12 @@ import TrackLink from '@/components/TrackLink.vue'
 
 .dev-project__lang {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     font-size: 20px;
-    gap: 20px;
+    gap: 30px;
 }
 .dev-project__lang div {
     text-align: center;

@@ -5,6 +5,7 @@
     </div>
     <DevCode />
     <DevProjects />
+    <DevFooter />
 </template>
 
 <script
@@ -16,6 +17,7 @@ import 'doodle.css/doodle.css'
 import Calculette from '@/calculette/Calculette.vue'
 import DevCode from '@/components/DevCode.vue'
 import DevProjects from '@/components/DevProjects.vue'
+import DevFooter from './components/DevFooter.vue'
 </script>
 
 <style>
