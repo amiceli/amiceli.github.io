@@ -56,6 +56,20 @@
         <p class="doodle--text">
             Si tu sais ce que c'est je t'offre le café !
         </p>
+        <br>
+        <hr>
+        <br>
+        <p class="doodle--text">
+            Et si tu veux en savoir plus
+        </p>
+        <div>
+            <a href="https://github.com/amiceli" target="_blank">
+                <img src="/assets/github.svg" alt="github">
+            </a>
+            <a href="https://dev.to/amiceli" target="_blank">
+                <img src="/assets/devto.svg" alt="devto">
+            </a>
+        </div>
     </div>
 </template>
 
@@ -85,5 +99,17 @@
     .dev-footer {
         width: 80%;
     }
+}
+
+p+div {
+    display: grid;
+    grid-template-columns: 70px 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+p+div img {
+    border: none;
 }
 </style>
