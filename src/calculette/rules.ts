@@ -106,11 +106,14 @@ export const rules: Record<number, RuleEntry> = {
     },
 
     // Blagues
+    0: {
+        name: 'walou',
+    },
     [valueMap[Awesome.ZERO] + valueMap[Awesome.ZERO]]: {
         name: 'La tete a Toto',
     },
     [valueMap[Frameworks.VUE] + valueMap[Frameworks.VUE]]: {
-        name: 'Déjà Vue',
+        name: 'Deja Vue',
     },
     [valueMap[Frameworks.VUE] * 3]: {
         name: 'Vuezela',

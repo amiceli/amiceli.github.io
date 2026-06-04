@@ -53,9 +53,12 @@
             ></path>
         </svg>
         <br>
-        <p class="doodle--text">
-            Si tu sais ce que c'est je t'offre le café !
-        </p>
+        <div class="for--coffee">
+            <span class="doodle--text">
+                Si tu reconnais ce dessin je te paye un café
+            </span>
+            <img src="/assets/coffeescript.svg" alt="coffeescript">
+        </div>
         <br>
         <hr>
         <br>
@@ -110,6 +113,19 @@ p+div {
 }
 
 p+div img {
+    border: none;
+}
+
+.for--coffee {
+    display: grid;
+    grid-template-columns: auto 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.for--coffee img {
+    width: 40px;
     border: none;
 }
 </style>

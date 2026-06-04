@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/vue'
-import { CalculetteStore } from '@/calculette/CalculetteStore'
+import { computed } from 'nanostores'
+import { type ButtonValue, CalculetteStore } from '@/calculette/CalculetteStore'
 
 export function useCalculette() {
     const store = CalculetteStore.getInstance()
@@ -9,5 +10,20 @@ export function useCalculette() {
         screen: useStore(store.screen),
         currentRule: useStore(store.currentRule),
         store,
+    }
+}
+
+export function useCalculetteButton(value: ButtonValue) {
+    const store = CalculetteStore.getInstance()
+    const imageSrcStore = store.getImageSrc(value)
+
+    return {
+        hoverColor: useStore(store.getHoverColor(value)),
+        imageSrc: useStore(
+            computed(imageSrcStore, (state) =>
+                state.state === 'ready' ? state.value : null,
+            ),
+        ),
+        isDisabled: useStore(store.getIsDisabled(value)),
     }
 }

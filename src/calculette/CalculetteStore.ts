@@ -1,3 +1,4 @@
+import { computedAsync } from '@nanostores/async'
 import { atom, computed } from 'nanostores'
 import {
     Actions,
@@ -8,6 +9,8 @@ import {
     rules as ruleMap,
     valueMap,
 } from '@/calculette/rules'
+
+export type ButtonValue = Actions | Awesome | Languages | Frameworks
 
 enum ScreenMessage {
     DEFAULT_VALUE = 'front-end',
@@ -63,6 +66,53 @@ export class CalculetteStore {
         (val) => val === ScreenMessage.ERROR,
     )
 
+    public readonly hoverColors = atom<Record<string, string>>({
+        [Frameworks.VUE]: '#4FC08D',
+        [Frameworks.LARAVEL]: '#FF2D20',
+        [Languages.PHP]: '#777BB4',
+        [Languages.JAVASCRIPT]: '#F7DF1E',
+        [Languages.TYPESCRIPT]: '#3178C6',
+        [Awesome.GITLAB]: '#FC6D26',
+        [Frameworks.STENCIL]: '#5530FF',
+        [Frameworks.DOCKER]: '#2496ED',
+        [Awesome.GHERKIN]: '#23D96C',
+    })
+
+    public getHoverColor(button: ButtonValue) {
+        return computed(this.hoverColors, (colors) => {
+            return colors[button] ?? null
+        })
+    }
+
+    public getImageSrc(button: ButtonValue) {
+        return computedAsync([], async () => {
+            const isAction = Object.values(Actions).includes(button as Actions)
+            const isZero = button === Awesome.ZERO
+
+            if (isAction || isZero) {
+                return null
+            }
+
+            const response = await fetch(`/assets/${button}.svg`)
+
+            if (!response.ok) {
+                return null
+            }
+
+            return await response.text()
+        })
+    }
+
+    public getIsDisabled(button: ButtonValue) {
+        return computed(this.screen, (screenValue) => {
+            if (button === Actions.MULTIPLY) {
+                return true
+            }
+
+            return false
+        })
+    }
+
     public static getInstance(): CalculetteStore {
         if (CalculetteStore.instance === null) {
             CalculetteStore.instance = new CalculetteStore()
@@ -107,7 +157,7 @@ export class CalculetteStore {
 
     public addValue(val: string): void {
         const currentValue = this.screen.get()
-        const isAction = Object.values(Actions).includes(val)
+        const isAction = Object.values(Actions).includes(val as Actions)
 
         if (this.isInit.get()) {
             if (!isAction) {

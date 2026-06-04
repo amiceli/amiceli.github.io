@@ -1,7 +1,7 @@
 <template>
-    <button @click="$emit('handle')">
+    <button :disabled="isDisabled" @click="handleClick">
         <div 
-            v-if="imageSrc !== null"
+            v-if="imageSrc"
             v-html="imageSrc"
             :style="{ '--hover-color': hoverColor }"
         ></div>
@@ -18,44 +18,28 @@
     setup
     lang="ts"
 >
-import { computed, onMounted, ref } from 'vue'
-import { Actions, Awesome, Frameworks, Languages } from '@/calculette/rules'
+import { useCalculetteButton } from '@/calculette/composable'
+import type {
+    Actions,
+    Awesome,
+    Frameworks,
+    Languages,
+} from '@/calculette/rules'
 
 const props = defineProps<{
     value: Actions | Awesome | Languages | Frameworks
     small?: boolean
 }>()
 
-const imageSrc = ref<string | null>(null)
+const emit = defineEmits<(event: 'handle') => void>()
 
-onMounted(async () => {
-    const isAction = Object.values(Actions).includes(props.value as Actions)
-    const isZero = props.value === Awesome.ZERO
+const { hoverColor, imageSrc, isDisabled } = useCalculetteButton(props.value)
 
-    if (!(isAction || isZero)) {
-        imageSrc.value = await fetch(`/assets/${props.value}.svg`).then((r) =>
-            r.text(),
-        )
+function handleClick() {
+    if (!isDisabled.value) {
+        emit('handle')
     }
-})
-
-const hoverColor = computed(() => {
-    const values: {
-        [key: string]: string
-    } = {
-        [Frameworks.VUE]: '#4FC08D',
-        [Frameworks.LARAVEL]: '#FF2D20',
-        [Languages.PHP]: '#777BB4',
-        [Languages.JAVASCRIPT]: '#F7DF1E',
-        [Languages.TYPESCRIPT]: '#3178C6',
-        [Awesome.GITLAB]: '#FC6D26',
-        [Frameworks.STENCIL]: '#5530FF',
-        [Frameworks.DOCKER]: '#2496ED',
-        [Awesome.GHERKIN]: '#23D96C',
-    }
-
-    return values[props.value] ?? null
-})
+}
 </script>
 
 <style scoped>
