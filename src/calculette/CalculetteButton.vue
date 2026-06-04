@@ -22,35 +22,39 @@ import { computed, onMounted, ref } from 'vue'
 import { Actions, Awesome, Frameworks, Languages } from '@/calculette/rules'
 
 const props = defineProps<{
-    value: string
+    value: Actions | Awesome | Languages | Frameworks
     small?: boolean
 }>()
 
-const imageSrc = ref(null)
+const imageSrc = ref<string | null>(null)
 
 onMounted(async () => {
-    if (Object.values(Actions).includes(props.value)) {
-        return
+    const isAction = Object.values(Actions).includes(props.value as Actions)
+    const isZero = props.value === Awesome.ZERO
+
+    if (!(isAction || isZero)) {
+        imageSrc.value = await fetch(`/assets/${props.value}.svg`).then((r) =>
+            r.text(),
+        )
+    }
+})
+
+const hoverColor = computed(() => {
+    const values: {
+        [key: string]: string
+    } = {
+        [Frameworks.VUE]: '#4FC08D',
+        [Frameworks.LARAVEL]: '#FF2D20',
+        [Languages.PHP]: '#777BB4',
+        [Languages.JAVASCRIPT]: '#F7DF1E',
+        [Languages.TYPESCRIPT]: '#3178C6',
+        [Awesome.GITLAB]: '#FC6D26',
+        [Frameworks.STENCIL]: '#5530FF',
+        [Frameworks.DOCKER]: '#2496ED',
+        [Awesome.GHERKIN]: '#23D96C',
     }
 
-    imageSrc.value = await fetch(`/assets/${props.value}.svg`).then((r) =>
-        r.text(),
-    )
-})
-const hoverColor = computed(() => {
-    return (
-        {
-            [Frameworks.VUE]: '#4FC08D',
-            [Frameworks.LARAVEL]: '#FF2D20',
-            [Languages.PHP]: '#777BB4',
-            [Languages.JAVASCRIPT]: '#F7DF1E',
-            [Languages.TYPESCRIPT]: '#3178C6',
-            [Awesome.GITLAB]: '#FC6D26',
-            [Frameworks.STENCIL]: '#5530FF',
-            [Frameworks.DOCKER]: '#2496ED',
-            [Awesome.GHERKIN]: '#23D96C',
-        }[props.value] ?? null
-    )
+    return values[props.value] ?? null
 })
 </script>
 

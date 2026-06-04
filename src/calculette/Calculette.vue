@@ -106,6 +106,7 @@ function updateScreen(value: string) {
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
+    user-select: none;
 
     overflow-x: auto;
     white-space: nowrap;

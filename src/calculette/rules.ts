@@ -5,7 +5,6 @@ export enum Actions {
     DIVIDE = '/',
     MULTIPLY = 'x',
     DOT = '.',
-    ZERO = '0',
     CLEAR = 'CE',
 }
 
@@ -25,6 +24,7 @@ export enum Frameworks {
 export enum Awesome {
     GITLAB = 'gitlab',
     GHERKIN = 'gherkin',
+    ZERO = '0',
 }
 
 // Binary power system: each element = 2^n
@@ -38,6 +38,7 @@ export const valueMap = {
     [Frameworks.STENCIL]: 64, // 2^6
     [Awesome.GITLAB]: 128, // 2^7
     [Awesome.GHERKIN]: 256, // 2^8
+    [Awesome.ZERO]: 512, // 2^9
 }
 
 export type RuleEntry = {
@@ -105,6 +106,9 @@ export const rules: Record<number, RuleEntry> = {
     },
 
     // Blagues
+    [valueMap[Awesome.ZERO] + valueMap[Awesome.ZERO]]: {
+        name: 'La tete a Toto',
+    },
     [valueMap[Frameworks.VUE] + valueMap[Frameworks.VUE]]: {
         name: 'Déjà Vue',
     },

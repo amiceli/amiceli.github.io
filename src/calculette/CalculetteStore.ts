@@ -38,7 +38,7 @@ export class CalculetteStore {
         Actions.LESS,
 
         // line
-        Actions.ZERO,
+        Awesome.ZERO,
         Actions.DOT,
         Actions.EQUAL,
         Actions.ADD,
