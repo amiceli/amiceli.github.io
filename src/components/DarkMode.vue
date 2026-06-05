@@ -4,6 +4,7 @@
             class="doodle--text"
             @click="next()"
         >
+            <img src="/assets/lumen.svg" alt="lumen logo">
             Thème : <u>{{ mode }}</u>
         </button>
     </div>
@@ -46,6 +47,13 @@ watchEffect(() => (mode.value = state.value))
 
     button:hover {
         cursor: pointer;
+    }
+
+    img {
+        height: 20px;
+        vertical-align: middle;
+        border : none;
+        margin-right: 10px;
     }
 }
 </style>
