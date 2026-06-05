@@ -69,7 +69,7 @@ watchEffect(() => (mode.value = state.value))
 }
 
 html.dark {
-    --background: #35374B;
+    --background: #452E5A;
     --border-color: #FAF7F3;
     --svg-fill: #fff;
     /* nok */
