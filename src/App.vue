@@ -1,4 +1,5 @@
 <template>
+    <DarkMode />
     <div class="app__welcome">
         <img src="/bienvenue.png" alt="bienvenue" />
         <Calculette />
@@ -17,6 +18,7 @@ import 'doodle.css/doodle.css'
 import Calculette from '@/calculette/Calculette.vue'
 import DevCode from '@/components/DevCode.vue'
 import DevProjects from '@/components/DevProjects.vue'
+import DarkMode from './components/DarkMode.vue'
 import DevFooter from './components/DevFooter.vue'
 </script>
 
@@ -34,18 +36,6 @@ html,
 body {
     padding: 0 0 40px 0;
     margin: 0;
-}
-
-/* @media (prefers-color-scheme: dark) {
-    body {
-        background: #171A1A;
-    }
-} */
-
-@media (prefers-color-scheme: light) {
-    body {
-        background: white;
-    }
 }
 </style>
 

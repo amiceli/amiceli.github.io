@@ -114,7 +114,7 @@ import TrackLink from '@/components/TrackLink.vue'
 
 <style scoped>
 .dev-project {
-    background: white;
+    background: transparent;
 }
 
 .dev-project h1 {

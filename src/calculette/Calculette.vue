@@ -82,7 +82,7 @@ function updateScreen(value: string) {
     display: inline-block;
     width: 472px;
     height: 664px;
-    border: 3px #000009 solid;
+    border: 3px var(--border-color) solid;
     box-sizing: border-box;
     padding: 38px 21px;
     border-radius: 20px;
@@ -98,7 +98,7 @@ function updateScreen(value: string) {
     height: 107px;
     line-height: 107px;
     width: 100%;
-    border: 3px #000009 solid;
+    border: 3px var(--border-color-2) solid;
     border-radius: 20px;
     font-size: 90px;
     font-weight: 200;

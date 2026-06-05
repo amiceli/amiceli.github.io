@@ -1,17 +1,21 @@
 <template>
-    <button :disabled="isDisabled" @click="handleClick">
-        <div 
-            v-if="imageSrc"
-            v-html="imageSrc"
-            :style="{ '--hover-color': hoverColor }"
-        ></div>
-        <span 
-            v-else 
-            :class="{ 'is--small': props.small }"
+    <div class="doodle">
+        <button
+            :disabled="isDisabled"
+            @click="handleClick"
         >
-            {{ props.value }}
-        </span>
-    </button>
+            <div
+                v-if="imageSrc"
+                v-html="imageSrc"
+            ></div>
+            <span
+                v-else
+                :class="{ 'is--small': props.small }"
+            >
+                {{ props.value }}
+            </span>
+        </button>
+    </div>
 </template>
 
 <script
@@ -44,11 +48,28 @@ function handleClick() {
 
 <style scoped>
 button {
-    background: transparent;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span:not(.is--small) {
+        font-size: 40px;
+    }
+
+    span.is--small {
+        font-size: 30px;
+    }
+}
+
+/* button {
+    background: yellow;
     box-sizing: none;
     height: 45px;
     border-radius: 15px;
-    border: 3px #000009 solid;
+    border-color : var(--border-color) !important;
     display: grid;
     grid-template-columns: 90%;
     align-items: center;
@@ -65,5 +86,5 @@ button span:not(.is--small) {
 
 button span.is--small {
     font-size: 30px;
-}
+} */
 </style>

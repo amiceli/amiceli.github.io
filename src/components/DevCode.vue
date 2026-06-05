@@ -45,7 +45,7 @@
             </ul>
             <blockquote>
                 Ça se voit pas avec ma tête de front end mais le <b>PHP</b>, reste
-                mon language préféré 🤘 !
+                mon language préféré <span class="for--icon">🤘</span> !
             </blockquote>
         </fieldset>
     </div>
@@ -64,7 +64,8 @@
     margin-right: auto;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media (pointer:none),
+(pointer:coarse) {
     .dev-formula {
         width: 100%;
     }
@@ -78,7 +79,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background: white;
+    background: transparent;
     display: grid;
     grid-template-columns: 1fr 70px 1fr;
     grid-auto-rows: 1fr;
@@ -87,15 +88,18 @@
     gap: 20px;
 }
 
-@media (pointer:none), (pointer:coarse) { 
+@media (pointer:none),
+(pointer:coarse) {
     .dev-code {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 70px 1fr;
     }
+
     .dev-code img {
         width: 70px;
     }
-    fieldset + div {
+
+    fieldset+div {
         text-align: center;
     }
 }
