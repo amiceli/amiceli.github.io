@@ -43,14 +43,15 @@ watchEffect(() => (mode.value = state.value))
     position: fixed;
     top: 20px;
     right: 20px;
-}
 
-.dark-mode button:hover {
-    cursor: pointer;
+    button:hover {
+        cursor: pointer;
+    }
 }
 </style>
 
 <style>
+/* Variables and common style */
 :root {
     --background-color: white;
     --svg-fill: dark;
@@ -75,38 +76,43 @@ html.pastel {
     --border-color-2: #000;
 }
 
-html.dark h2,
-h1 {
-    color: white;
-}
-
-html.dark .dev-footer img {
-    filter: invert(1);
-}
-
-html.dark .dev-footer .doodle--text,
-html.dark .dev-project .doodle--text {
-    color: white;
-}
-
-html.dark a {
-    color: #7077A1;
-}
-
-
 body {
     background: var(--background);
 }
+</style>
 
-html.dark .dev-formula {
-    filter: invert(1);
-}
+<!-- html.dark -->
+<style>
+html.dark {
 
-html.dark .doodle fieldset {
-    filter: invert(1);
-}
+    h2,
+    h1 {
+        color: white;
+    }
 
-html.dark .doodle .for--icon {
-    filter: invert(12);
+    .dev-footer img {
+        filter: invert(1);
+    }
+
+    .dev-footer .doodle--text,
+    .dev-project .doodle--text {
+        color: white;
+    }
+
+    a {
+        color: #7077A1;
+    }
+
+    .dev-formula {
+        filter: invert(1);
+    }
+
+    .doodle fieldset {
+        filter: invert(1);
+    }
+
+    .doodle .for--icon {
+        filter: invert(12);
+    }
 }
 </style>
