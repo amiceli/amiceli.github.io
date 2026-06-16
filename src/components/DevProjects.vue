@@ -17,7 +17,22 @@
                 <br>
                 Je ne trouvais pas d'outils pour créer des tests unitaires Gherkin avec <b>Vitest</b>.
                 <br>
-                Alors je me suis lançais sur le projet ;).
+                Alors je me suis
+                <span
+                    class="hint--bottom hint--medium"
+                    aria-label="Pour les casse-couilles qui ne
+                    remontent que les fautes d’orthographe."
+                >
+                    <span
+                        class="brouillon"
+                    >
+                        lançais
+                    </span>
+                </span>
+                <span>
+                    lancé
+                </span>
+                sur le projet ;).
             </p>
         </div>
 
@@ -110,6 +125,7 @@
     lang="ts"
 >
 import TrackLink from '@/components/TrackLink.vue'
+import "hint.css/hint.css"
 </script>
 
 <style scoped>
@@ -173,6 +189,7 @@ import TrackLink from '@/components/TrackLink.vue'
         grid-template-rows: auto auto auto;
         grid-template-columns: unset;
     }
+
     .dev-project__lang div {
         padding-left: 10px;
         padding-right: 10px;
@@ -181,5 +198,73 @@ import TrackLink from '@/components/TrackLink.vue'
 
 .dev-project__lang div {
     text-align: center;
+}
+
+.hint--bottom:after {
+    font-family: 'Short Stack', cursive;
+}
+
+.brouillon {
+    position: relative;
+    display: inline-block;
+}
+
+.brouillon {
+    position: relative;
+    display: inline-block;
+}
+
+.brouillon {
+    position: relative;
+    display: inline-block;
+}
+
+.brouillon::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    top: 30%;
+    height: 10px;
+
+    background:
+        repeating-linear-gradient(-10deg,
+            transparent 0px,
+            transparent 2px,
+            var(--strike-color) 2px,
+            var(--strike-color) 3px),
+        repeating-linear-gradient(8deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(220, 30, 30, 0.55) 3px,
+            rgba(220, 30, 30, 0.55) 4px),
+        repeating-linear-gradient(-3deg,
+            transparent 0px,
+            transparent 1px,
+            rgba(220, 30, 30, 0.65) 1px,
+            rgba(220, 30, 30, 0.65) 2px);
+
+    transform: rotate(-2.5deg);
+    opacity: 1;
+    pointer-events: none;
+    filter: blur(0.25px);
+}
+
+span[data-tooltip] {
+    position: relative;
+}
+
+span[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
 }
 </style>

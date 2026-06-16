@@ -37,6 +37,10 @@ body {
     padding: 0 0 40px 0;
     margin: 0;
 }
+
+:root {
+    --strike-color: red;
+}
 </style>
 
 <style>
