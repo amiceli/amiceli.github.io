@@ -125,7 +125,7 @@
     lang="ts"
 >
 import TrackLink from '@/components/TrackLink.vue'
-import "hint.css/hint.css"
+import 'hint.css/hint.css'
 </script>
 
 <style scoped>
