@@ -1,7 +1,6 @@
-# miceli.click v3
+# [amiceli.github.io](https://amiceli.github.io/)
 
-Liens : 
-- Icones : https://simpleicons.org/?utm_source=chatgpt.com&q=toto
-- CSS : https://chr15m.github.io/DoodleCSS/
-- Animation : https://roughnotation.com/?utm_source=chatgpt.com
-
+Awesome libs :
+- [Nanostores](https://github.com/nanostores/nanostores)
+- [Hint.css](https://kushagra.dev/lab/hint/)
+- [Doodle CSS](https://chr15m.github.io/DoodleCSS/)

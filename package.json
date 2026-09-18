@@ -26,7 +26,6 @@
         "@vitejs/plugin-vue": "^6.0.9",
         "lefthook": "^2.1.14",
         "typescript": "^7.0.2",
-        "vite": "^8.3.0",
-        "vite-plugin-vue-devtools": "^8.2.1"
+        "vite": "^8.3.0"
     }
 }
