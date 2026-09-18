@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://vitest-cucumber.miceli.click/" target="_blank">
+                    <a href="https://amiceli.github.io/vitest-cucumber-docs/" target="_blank">
                         <b>vitest-cucumber</b>
                     </a>
                     : qualité et respect des specs

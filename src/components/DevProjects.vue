@@ -7,7 +7,7 @@
         <div class="dev-project__item doodle--text">
             <h2 class="with--link">
                 <TrackLink link="https://github.com/amiceli/vitest-cucumber">
-                    <img src="https://vitest-cucumber.miceli.click/logo.png" />
+                    <img src="https://amiceli.github.io/vitest-cucumber-docs/logo.png" />
                     vitest-cucumber
                 </TrackLink>
             </h2>

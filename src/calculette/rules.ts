@@ -56,13 +56,13 @@ const preums: RuleEntry = {
 const vitestCucumber: RuleEntry = {
     name: 'vitest-cucumber',
     repository: 'https://github.com/amiceli/vitest-cucumber',
-    website: 'https://vitest-cucumber.miceli.click/',
+    website: 'https://amiceli.github.io/vitest-cucumber-docs/',
 }
 
 const papierjs: RuleEntry = {
     name: 'PapierJS',
     repository: 'https://github.com/amiceli/papierjs',
-    website: 'https://papier.miceli.click/',
+    website: 'https://amiceli.github.io/papierjs/',
 }
 
 export const rules: Record<number, RuleEntry> = {
